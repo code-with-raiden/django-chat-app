@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Chat - Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa; /* Light cyan background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .login-container {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #00796b; /* Teal color */
+            font-size: 28px;
+            font-weight: 600;
+        }
+        label {
+            display: block;
+            margin: 12px 0 6px;
+            font-weight: 500;
+            color: #00796b; /* Teal color */
+            text-align: left;
+        }
+        input[type=text] {
+            width: calc(100% - 24px);
+            padding: 14px;
+            border: 1px solid #00796b;
+            border-radius: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        input[type=text]:focus {
+            border-color: #004d40; /* Darker teal */
+            box-shadow: 0 0 8px rgba(0, 77, 64, 0.3);
+        }
+        input[type=submit] {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #004d40; /* Darker teal */
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type=submit]:hover {
+            background-color: #00796b; /* Lighter teal */
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Django Chat</h2>
+    <form id="post-form" method="POST" action="checkview">
+        {% csrf_token %}
+        <label for="room_name">Room Name</label>
+        <input type="text" name="room_name" id="room_name" placeholder="Enter room name" />
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="Enter username" />
+        <input type="submit" value="Enter Room">
+    </form>
+</div>
+
+</body>
+</html>
