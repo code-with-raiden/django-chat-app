@@ -1,9 +1,9 @@
 # Django-chat-app
+- A Python project for chatting application created using Django HTML content, and more 
 
 
 ## Project Link
 Access the live project here:  [CHAT APPLICATION](https://django-chat-6uajll248-raidens-projects-9865fec7.vercel.app/)   
-- A Python project for chatting application created using Django HTML content, and more 
 ## Features
 - Send  OTP for login .
 - chatting with multiple user .
